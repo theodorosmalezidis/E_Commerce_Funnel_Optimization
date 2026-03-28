@@ -4,7 +4,7 @@ In this scenario an e-commerce platform is currently seeing a strong overall con
 
 # Dataset
 
-For the full field descriptions see the  [Data Dictionary](link here).
+For the full field descriptions see the  [Data Dictionary](https://github.com/theodorosmalezidis/E_Commerce_Funnel_Optimization/blob/main/Data%20Dictionary.md).
 
 # Goals
 
