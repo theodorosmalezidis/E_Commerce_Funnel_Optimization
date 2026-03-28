@@ -18,6 +18,6 @@
 | country      | STRING  | The user's geographic location (Country of residence).               |
 | product_category           | STRING  | The category to which the product belongs.|
 
----
+
 
 
