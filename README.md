@@ -2,6 +2,7 @@
 
 In this scenario an e-commerce platform is currently seeing a strong overall conversion rate. However, management is concerned that this strong overall rate may mask significant leakage at individual funnel stages due to limited visibility. So I was tasked to find and identify if such leaks exists, and create a tool for future monitoring and reporting so the company can stay ahead of the game.
 
+
 # Dataset
 
 For the full field descriptions see the  [Data Dictionary](https://github.com/theodorosmalezidis/E_Commerce_Funnel_Optimization/blob/main/Data%20Dictionary.md).
@@ -178,6 +179,8 @@ order by
 Same findings in product category level too for the funnel stage we investigate, the conversion rate ranges from 30.40% to 32.12%
 
 
+
+
 **By traffic source**
 
 ```sql
@@ -219,6 +222,8 @@ order by
 | Paid Ads | 36.98 | 72.91 | 82.76 | 94.44 | 21.07 |
 | Organic | 32.83 | 70.70 | 80.55 | 90.03 | 16.83 |
 | Social | 13.59 | 70.50 | 79.43 | 91.07 | 6.93 |
+
+
 
 An interesting result, although in general we meet the same trend here in funnel conversion rates, social as traffic source has lower than average numbers especially in both cart_conversion_rate and overall_conversion_rate with 13.59% and 6.93% respectively, where email traffic showcases significantly higher rates with 62.45% and 33.91% in the same funnel stages.
 
@@ -336,7 +341,7 @@ Step 3 summary: For comparison and to reveal if there is any difference in conve
 # Phase 2: Developing a BI tool solution
 
 
-Following my last recommendation and to develop a  BI Ecosystem, first i will enginner a Scheduled SQL Pipeline in BigQuery to generate a weekly "Master Funnel Table" and push the weekly results  for dashboard consumption and automated reporting.
+Following my last recommendation and to develop a  BI Ecosystem, first i will enginner a Scheduled SQL Pipeline in BigQuery to generate a weekly "Master Funnel Table" and push the weekly results for dashboard consumption and automated reporting.
 
 - 1. Create a scheduled SQL query that runs every Monday at 06:00 AM and executes the following script using a rolling 7-day window and populates the weekly_global_funnel_summary table with fresh volumes and conversion rates.
 
