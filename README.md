@@ -343,7 +343,7 @@ Step 3 summary: For comparison and to reveal if there is any difference in conve
 
 Following my last recommendation and to develop a  BI Ecosystem, first i will enginner a Scheduled SQL Pipeline in BigQuery to generate a weekly "Master Funnel Table" and push the weekly results for dashboard consumption and automated reporting.
 
-- 1. Create a scheduled SQL query that runs every Monday at 06:00 AM and executes the following script using a rolling 7-day window and populates the weekly_global_funnel_summary table with fresh volumes and conversion rates.
+ 1. Create a scheduled SQL query that runs every Monday at 06:00 AM and executes the following script using a rolling 7-day window and populates the weekly_global_funnel_summary table with fresh volumes and conversion rates.
 
 
 ```sql
@@ -382,9 +382,9 @@ order by
   conversion_rate desc;
 ```
 
-- 2. Connect Looker Studio directly to the weekly_global_funnel_summary table, and create a dashboard.
+ 2. Connect Looker Studio directly to the weekly_global_funnel_summary table, and create a dashboard.
 
-- 3. Schedule a PDF (of the dashboard) delivery mail every Monday at 07:00 AM to marketing team, stakeholders etc.
+ 3. Schedule a PDF (of the dashboard) delivery mail every Monday at 07:00 AM to marketing team, stakeholders etc.
 
 
 And for the regional managers to perform instant, ON-DEMAND drill-downs into specific country performance without writing additional code - the following Parametric Stored Procedure.
