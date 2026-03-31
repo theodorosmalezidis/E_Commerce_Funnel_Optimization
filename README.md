@@ -229,7 +229,7 @@ An interesting result, although in general we meet the same trend here in funnel
 
 Step 2 Summary: The "View to Cart" leakage is universal across all dimensions. While Country and Product Category show relative stability, Traffic Source reveals the most extreme variance: Social is the weakest link (13.59% View to Cart), while Email is the strongest (62.45% View to Cart).
 
-- Step 3: Calculate session-based funnel conversion time for both total and complete journes.
+- Step 3: Calculate session-based funnel conversion time for both total and complete journeys.
 
 ```sql
 with funnel_duration as(
@@ -248,7 +248,7 @@ with funnel_duration as(
     session_id
 )
 select
-    count(*) as total_journes
+    count(*) as total_journeys
   , round(avg(timestamp_diff(cart_time, view_time, minute)), 2) as avg_view_to_cart_minutes
   , round(avg(timestamp_diff(checkout_time, cart_time, minute)), 2) as avg_cart_to_checkout_minutes
   , round(avg(timestamp_diff(payment_time, checkout_time, minute)), 2) as avg_checkout_to_payment_minutes
